@@ -31,7 +31,7 @@ class CustomAsset extends StatelessWidget {
         AssetType.asset => Image.asset(
           assetPath,
           width: width.w,
-          height: height.h,
+          height: height.w,
           fit: fit,
         ),
         AssetType.network => CachedNetworkImage(
