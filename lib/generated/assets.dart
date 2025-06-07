@@ -11,12 +11,14 @@ class Assets {
   static const String imagesHelmet = 'assets/images/helmet.png';
   static const String navSvgsCart = 'assets/svgs/nav_svgs/cart.svg';
   static const String navSvgsDoc = 'assets/svgs/nav_svgs/doc.svg';
+  static const String navSvgsNavBg = 'assets/svgs/nav_svgs/nav_bg.svg';
   static const String navSvgsPerson = 'assets/svgs/nav_svgs/person.svg';
   static const String navSvgsWalls = 'assets/svgs/nav_svgs/walls.svg';
   static const String svgsArrowBack = 'assets/svgs/arrow_back.svg';
   static const String svgsArrowForward = 'assets/svgs/arrow_forward.svg';
   static const String svgsBgRectangle = 'assets/svgs/bg_rectangle.svg';
   static const String svgsBicycle = 'assets/svgs/bicycle.svg';
+  static const String svgsCustomHomeCard = 'assets/svgs/custom_home_card.svg';
   static const String svgsDash = 'assets/svgs/dash.svg';
   static const String svgsHeart = 'assets/svgs/heart.svg';
   static const String svgsHelmet = 'assets/svgs/helmet.svg';

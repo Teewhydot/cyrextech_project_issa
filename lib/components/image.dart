@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-enum AssetType { asset, network, svg }
+enum AssetType { image, network, svg }
 
 class CustomAsset extends StatelessWidget {
   final String assetPath;
@@ -21,14 +21,14 @@ class CustomAsset extends StatelessWidget {
     this.borderRadius = 0.0,
     this.svgAssetColor,
     this.fit = BoxFit.cover,
-    this.assetType = AssetType.asset,
+    this.assetType = AssetType.image,
   });
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(borderRadius),
       child: switch (assetType) {
-        AssetType.asset => Image.asset(
+        AssetType.image => Image.asset(
           assetPath,
           width: width.w,
           height: height.w,
