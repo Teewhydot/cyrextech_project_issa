@@ -53,6 +53,7 @@ class CustomWrapText extends StatelessWidget {
   final FontWeight fontWeight;
   final TextAlign textAlign;
   final TextOverflow? textOverflow;
+  final Alignment alignment;
   const CustomWrapText({
     super.key,
     required this.text,
@@ -60,13 +61,14 @@ class CustomWrapText extends StatelessWidget {
     this.color = kWhite,
     this.fontWeight = FontWeight.bold,
     this.textAlign = TextAlign.center,
+    this.alignment = Alignment.topLeft,
     this.textOverflow,
   });
 
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.center, // Adjust alignment as needed
+      alignment: alignment, // Adjust alignment as needed
       child: Wrap(
         alignment: WrapAlignment.center, // Aligns the text within the Wrap
         children: [
@@ -74,8 +76,7 @@ class CustomWrapText extends StatelessWidget {
             text,
             textAlign: textAlign, // Ensures text is centered
             overflow: textOverflow,
-            style: TextStyle(
-              fontFamily: "ProximaNova",
+            style: GoogleFonts.poppins(
               fontSize: fontSize.sp,
               color: color,
               fontWeight: fontWeight,

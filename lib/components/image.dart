@@ -1,9 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-enum AssetType { image, network, svg }
+enum AssetType { image, svg }
 
 class CustomAsset extends StatelessWidget {
   final String assetPath;
@@ -34,16 +33,7 @@ class CustomAsset extends StatelessWidget {
           height: height.w,
           fit: fit,
         ),
-        AssetType.network => CachedNetworkImage(
-          imageUrl: assetPath,
-          width: width.w,
-          height: height.h,
-          fit: fit,
-          filterQuality: FilterQuality.high,
-          placeholder:
-              (context, url) =>
-                  const Center(child: CircularProgressIndicator.adaptive()),
-        ),
+
         AssetType.svg => Align(
           alignment: Alignment.center,
           child: SvgPicture.asset(
