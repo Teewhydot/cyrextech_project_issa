@@ -27,442 +27,231 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                IconButton(
-                  icon: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 300),
-                    transitionBuilder: (
-                      Widget child,
-                      Animation<double> animation,
-                    ) {
-                      return ScaleTransition(scale: animation, child: child);
+                Expanded(
+                  child: IconButton(
+                    icon: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 300),
+                      transitionBuilder: (
+                        Widget child,
+                        Animation<double> animation,
+                      ) {
+                        return ScaleTransition(scale: animation, child: child);
+                      },
+                      child:
+                          selectedIndex == 0
+                              ? SkewedContainer(
+                                key: const ValueKey('selected_0'),
+                                width: 70,
+                                height: 60,
+                                skew: true,
+                                child: CustomAsset(
+                                  assetPath: Assets.svgsBicycle,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              )
+                              : SizedBox(
+                                width: 60,
+                                height: 60,
+                                child: CustomAsset(
+                                  key: const ValueKey('unselected_0'),
+                                  assetPath: Assets.svgsBicycle,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              ),
+                    ),
+                    onPressed: () {
+                      // Handle home button press
+                      setState(() {
+                        selectedIndex = 0;
+                      });
                     },
-                    child:
-                        selectedIndex == 0
-                            ? SkewedContainer(
-                              key: const ValueKey('selected_0'),
-                              width: 70,
-                              height: 60,
-                              skew: true,
-                              child: CustomAsset(
-                                assetPath: Assets.svgsBicycle,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
-                              ),
-                            )
-                            : SizedBox(
-                              width: 60,
-                              height: 60,
-                              child: CustomAsset(
-                                key: const ValueKey('unselected_0'),
-                                assetPath: Assets.svgsBicycle,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
-                              ),
-                            ),
                   ),
-                  onPressed: () {
-                    // Handle home button press
-                    setState(() {
-                      selectedIndex = 0;
-                    });
-                  },
                 ),
-                IconButton(
-                  icon: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 300),
-                    transitionBuilder: (
-                      Widget child,
-                      Animation<double> animation,
-                    ) {
-                      return ScaleTransition(scale: animation, child: child);
+                Expanded(
+                  child: IconButton(
+                    icon: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 300),
+                      transitionBuilder: (
+                        Widget child,
+                        Animation<double> animation,
+                      ) {
+                        return ScaleTransition(scale: animation, child: child);
+                      },
+                      child:
+                          selectedIndex == 1
+                              ? SkewedContainer(
+                                key: const ValueKey('selected_1'),
+                                width: 60,
+                                height: 60,
+                                skew: true,
+                                child: CustomAsset(
+                                  assetPath: Assets.navSvgsWalls,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              )
+                              : SizedBox(
+                                width: 60,
+                                height: 60,
+                                child: CustomAsset(
+                                  key: const ValueKey('unselected_1'),
+                                  assetPath: Assets.navSvgsWalls,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              ),
+                    ),
+                    onPressed: () {
+                      // Handle favorite button press
+                      setState(() {
+                        selectedIndex = 1;
+                      });
                     },
-                    child:
-                        selectedIndex == 1
-                            ? SkewedContainer(
-                              key: const ValueKey('selected_1'),
-                              width: 60,
-                              height: 60,
-                              skew: true,
-                              child: CustomAsset(
-                                assetPath: Assets.navSvgsWalls,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
-                              ),
-                            )
-                            : SizedBox(
-                              width: 60,
-                              height: 60,
-                              child: CustomAsset(
-                                key: const ValueKey('unselected_1'),
-                                assetPath: Assets.navSvgsWalls,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
-                              ),
-                            ),
                   ),
-                  onPressed: () {
-                    // Handle favorite button press
-                    setState(() {
-                      selectedIndex = 1;
-                    });
-                  },
                 ),
-                IconButton(
-                  icon: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 300),
-                    transitionBuilder: (
-                      Widget child,
-                      Animation<double> animation,
-                    ) {
-                      return ScaleTransition(scale: animation, child: child);
-                    },
-                    child:
-                        selectedIndex == 2
-                            ? SkewedContainer(
-                              key: const ValueKey('selected_2'),
-                              width: 60,
-                              height: 60,
-                              skew: true,
-                              child: CustomAsset(
-                                assetPath: Assets.navSvgsCart,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
-                              ),
-                            )
-                            : SizedBox(
-                              width: 60,
-                              height: 60,
+                Expanded(
+                  child: IconButton(
+                    icon: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 300),
+                      transitionBuilder: (
+                        Widget child,
+                        Animation<double> animation,
+                      ) {
+                        return ScaleTransition(scale: animation, child: child);
+                      },
+                      child:
+                          selectedIndex == 2
+                              ? SkewedContainer(
+                                key: const ValueKey('selected_2'),
+                                width: 60,
+                                height: 60,
+                                skew: true,
+                                child: CustomAsset(
+                                  assetPath: Assets.navSvgsCart,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              )
+                              : SizedBox(
+                                width: 60,
+                                height: 60,
 
-                              child: CustomAsset(
-                                key: const ValueKey('unselected_2'),
-                                assetPath: Assets.navSvgsCart,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
+                                child: CustomAsset(
+                                  key: const ValueKey('unselected_2'),
+                                  assetPath: Assets.navSvgsCart,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
                               ),
-                            ),
-                  ),
-                  onPressed: () {
-                    // Handle favorite button press
-                    setState(() {
-                      selectedIndex = 2;
-                    });
-                  },
-                ),
-                IconButton(
-                  icon: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 300),
-                    transitionBuilder: (
-                      Widget child,
-                      Animation<double> animation,
-                    ) {
-                      return ScaleTransition(scale: animation, child: child);
+                    ),
+                    onPressed: () {
+                      // Handle favorite button press
+                      setState(() {
+                        selectedIndex = 2;
+                      });
                     },
-                    child:
-                        selectedIndex == 3
-                            ? SkewedContainer(
-                              key: const ValueKey('selected_3'),
-                              width: 60,
-                              height: 60,
-                              skew: true,
-                              child: CustomAsset(
-                                assetPath: Assets.navSvgsPerson,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
-                              ),
-                            )
-                            : SizedBox(
-                              width: 60,
-                              height: 60,
-                              child: CustomAsset(
-                                key: const ValueKey('unselected_3'),
-                                assetPath: Assets.navSvgsPerson,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
-                              ),
-                            ),
                   ),
-                  onPressed: () {
-                    // Handle profile button press
-                    setState(() {
-                      selectedIndex = 3;
-                    });
-                  },
                 ),
-                IconButton(
-                  icon: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 300),
-                    transitionBuilder: (
-                      Widget child,
-                      Animation<double> animation,
-                    ) {
-                      return ScaleTransition(scale: animation, child: child);
+                Expanded(
+                  child: IconButton(
+                    icon: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 300),
+                      transitionBuilder: (
+                        Widget child,
+                        Animation<double> animation,
+                      ) {
+                        return ScaleTransition(scale: animation, child: child);
+                      },
+                      child:
+                          selectedIndex == 3
+                              ? SkewedContainer(
+                                key: const ValueKey('selected_3'),
+                                width: 60,
+                                height: 60,
+                                skew: true,
+                                child: CustomAsset(
+                                  assetPath: Assets.navSvgsPerson,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              )
+                              : SizedBox(
+                                width: 60,
+                                height: 60,
+                                child: CustomAsset(
+                                  key: const ValueKey('unselected_3'),
+                                  assetPath: Assets.navSvgsPerson,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              ),
+                    ),
+                    onPressed: () {
+                      // Handle profile button press
+                      setState(() {
+                        selectedIndex = 3;
+                      });
                     },
-                    child:
-                        selectedIndex == 4
-                            ? SkewedContainer(
-                              key: const ValueKey('selected_4'),
-                              width: 60,
-                              height: 60,
-                              skew: true,
-                              child: CustomAsset(
-                                assetPath: Assets.navSvgsDoc,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
-                              ),
-                            )
-                            : SizedBox(
-                              width: 60,
-                              height: 60,
-                              child: CustomAsset(
-                                key: const ValueKey('unselected_4'),
-                                assetPath: Assets.navSvgsDoc,
-                                assetType: AssetType.svg,
-                                width: 28,
-                                height: 28,
-                              ),
-                            ),
                   ),
-                  onPressed: () {
-                    // Handle profile button press
-                    setState(() {
-                      selectedIndex = 4;
-                    });
-                  },
+                ),
+                Expanded(
+                  child: IconButton(
+                    icon: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 300),
+                      transitionBuilder: (
+                        Widget child,
+                        Animation<double> animation,
+                      ) {
+                        return ScaleTransition(scale: animation, child: child);
+                      },
+                      child:
+                          selectedIndex == 4
+                              ? SkewedContainer(
+                                key: const ValueKey('selected_4'),
+                                width: 60,
+                                height: 60,
+                                skew: true,
+                                child: CustomAsset(
+                                  assetPath: Assets.navSvgsDoc,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              )
+                              : SizedBox(
+                                width: 60,
+                                height: 60,
+                                child: CustomAsset(
+                                  key: const ValueKey('unselected_4'),
+                                  assetPath: Assets.navSvgsDoc,
+                                  assetType: AssetType.svg,
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              ),
+                    ),
+                    onPressed: () {
+                      // Handle profile button press
+                      setState(() {
+                        selectedIndex = 4;
+                      });
+                    },
+                  ),
                 ),
               ],
             ),
           ),
         ),
-        // Positioned(
-        //   left: 0,
-        //   right: 0,
-        //   top: 5,
-        //   child: Row(
-        //     spacing: 3,
-        //     children: [
-        //       IconButton(
-        //         icon: AnimatedSwitcher(
-        //           duration: const Duration(milliseconds: 300),
-        //           transitionBuilder: (
-        //             Widget child,
-        //             Animation<double> animation,
-        //           ) {
-        //             return ScaleTransition(scale: animation, child: child);
-        //           },
-        //           child:
-        //               selectedIndex == 0
-        //                   ? SkewedContainer(
-        //                     key: const ValueKey('selected_0'),
-        //                     width: 70,
-        //                     height: 60,
-        //                     skew: true,
-        //                     child: CustomAsset(
-        //                       assetPath: Assets.svgsBicycle,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   )
-        //                   : SizedBox(
-        //                     width: 60,
-        //                     height: 60,
-        //                     child: CustomAsset(
-        //                       key: const ValueKey('unselected_0'),
-        //                       assetPath: Assets.svgsBicycle,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   ),
-        //         ),
-        //         onPressed: () {
-        //           // Handle home button press
-        //           setState(() {
-        //             selectedIndex = 0;
-        //           });
-        //         },
-        //       ),
-        //       IconButton(
-        //         icon: AnimatedSwitcher(
-        //           duration: const Duration(milliseconds: 300),
-        //           transitionBuilder: (
-        //             Widget child,
-        //             Animation<double> animation,
-        //           ) {
-        //             return ScaleTransition(scale: animation, child: child);
-        //           },
-        //           child:
-        //               selectedIndex == 1
-        //                   ? SkewedContainer(
-        //                     key: const ValueKey('selected_1'),
-        //                     width: 60,
-        //                     height: 60,
-        //                     skew: true,
-        //                     child: CustomAsset(
-        //                       assetPath: Assets.navSvgsWalls,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   )
-        //                   : SizedBox(
-        //                     width: 60,
-        //                     height: 60,
-        //                     child: CustomAsset(
-        //                       key: const ValueKey('unselected_1'),
-        //                       assetPath: Assets.navSvgsWalls,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   ),
-        //         ),
-        //         onPressed: () {
-        //           // Handle favorite button press
-        //           setState(() {
-        //             selectedIndex = 1;
-        //           });
-        //         },
-        //       ),
-        //       IconButton(
-        //         icon: AnimatedSwitcher(
-        //           duration: const Duration(milliseconds: 300),
-        //           transitionBuilder: (
-        //             Widget child,
-        //             Animation<double> animation,
-        //           ) {
-        //             return ScaleTransition(scale: animation, child: child);
-        //           },
-        //           child:
-        //               selectedIndex == 2
-        //                   ? SkewedContainer(
-        //                     key: const ValueKey('selected_2'),
-        //                     width: 60,
-        //                     height: 60,
-        //                     skew: true,
-        //                     child: CustomAsset(
-        //                       assetPath: Assets.navSvgsCart,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   )
-        //                   : SizedBox(
-        //                     width: 60,
-        //                     height: 60,
-        //
-        //                     child: CustomAsset(
-        //                       key: const ValueKey('unselected_2'),
-        //                       assetPath: Assets.navSvgsCart,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   ),
-        //         ),
-        //         onPressed: () {
-        //           // Handle favorite button press
-        //           setState(() {
-        //             selectedIndex = 2;
-        //           });
-        //         },
-        //       ),
-        //       IconButton(
-        //         icon: AnimatedSwitcher(
-        //           duration: const Duration(milliseconds: 300),
-        //           transitionBuilder: (
-        //             Widget child,
-        //             Animation<double> animation,
-        //           ) {
-        //             return ScaleTransition(scale: animation, child: child);
-        //           },
-        //           child:
-        //               selectedIndex == 3
-        //                   ? SkewedContainer(
-        //                     key: const ValueKey('selected_3'),
-        //                     width: 60,
-        //                     height: 60,
-        //                     skew: true,
-        //                     child: CustomAsset(
-        //                       assetPath: Assets.navSvgsPerson,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   )
-        //                   : SizedBox(
-        //                     width: 60,
-        //                     height: 60,
-        //                     child: CustomAsset(
-        //                       key: const ValueKey('unselected_3'),
-        //                       assetPath: Assets.navSvgsPerson,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   ),
-        //         ),
-        //         onPressed: () {
-        //           // Handle profile button press
-        //           setState(() {
-        //             selectedIndex = 3;
-        //           });
-        //         },
-        //       ),
-        //       IconButton(
-        //         icon: AnimatedSwitcher(
-        //           duration: const Duration(milliseconds: 300),
-        //           transitionBuilder: (
-        //             Widget child,
-        //             Animation<double> animation,
-        //           ) {
-        //             return ScaleTransition(scale: animation, child: child);
-        //           },
-        //           child:
-        //               selectedIndex == 4
-        //                   ? SkewedContainer(
-        //                     key: const ValueKey('selected_4'),
-        //                     width: 60,
-        //                     height: 60,
-        //                     skew: true,
-        //                     child: CustomAsset(
-        //                       assetPath: Assets.navSvgsDoc,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   )
-        //                   : SizedBox(
-        //                     width: 60,
-        //                     height: 60,
-        //                     child: CustomAsset(
-        //                       key: const ValueKey('unselected_4'),
-        //                       assetPath: Assets.navSvgsDoc,
-        //                       assetType: AssetType.svg,
-        //                       width: 28,
-        //                       height: 28,
-        //                     ),
-        //                   ),
-        //         ),
-        //         onPressed: () {
-        //           // Handle profile button press
-        //           setState(() {
-        //             selectedIndex = 4;
-        //           });
-        //         },
-        //       ),
-        //     ],
-        //   ),
-        // ),
       ],
     );
   }

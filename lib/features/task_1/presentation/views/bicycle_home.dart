@@ -11,6 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../../generated/assets.dart';
+import '../widgets/home_card.dart';
 
 class BicycleHome extends StatelessWidget {
   const BicycleHome({super.key});
@@ -18,6 +19,7 @@ class BicycleHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      clipBehavior: Clip.none,
       children: [
         Container(width: 1.sw, height: 1.sh, color: kCharcoal),
         Positioned(
@@ -40,82 +42,66 @@ class BicycleHome extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CustomText(
-                      text: "Choose your Bike",
-                      fontSize: 20,
-                      color: kWhite,
-                      fontWeight: FontWeight.w700,
-                    ),
-                    SkewedContainer(
-                      width: 44,
-                      height: 44,
-                      child: CustomAsset(
-                        assetPath: Assets.svgsSearch,
-                        assetType: AssetType.svg,
-                        width: 20,
-                        height: 20,
-                      ),
-                    ),
-                  ],
-                ),
+                Header(),
                 20.verticalSpace,
+                HomeCard(),
+                SkewedContainerStack(),
+                10.verticalSpace,
                 Stack(
+                  alignment: Alignment.topRight,
                   clipBehavior: Clip.none,
                   children: [
-                    CustomAsset(
-                      assetPath: Assets.svgsCustomHomeCard,
-                      assetType: AssetType.svg,
-                      width: 1.sw,
-                      height: 250,
-                    ),
                     Positioned(
-                      top: 30.h,
-                      left: 17.w,
-                      right: 17.w,
-                      child: CustomAsset(
-                        assetPath: Assets.imagesElectricBikeShort1,
-                        assetType: AssetType.image,
-                        height: 153,
+                      child: SkewedContainer(
+                        width: 165,
+                        height: 235,
+                        skew: true,
                       ),
                     ),
                     Positioned(
-                      top: 177.h,
-                      left: 17.w,
-                      right: 17.w,
-                      child: CustomText(
-                        text: "30 % OFF",
-                        fontSize: 26,
-                        color: kWhite,
-                        fontWeight: FontWeight.bold,
-                        alignment: MainAxisAlignment.start,
+                      right: 0,
+                      child: SkewedContainer(
+                        width: 165,
+                        height: 219,
+                        skew: true,
                       ),
                     ),
                   ],
-                ),
-                SkewedContainerStack(),
-                0.verticalSpace,
-                Transform(
-                  transform: Matrix4.skewX(
-                    -0.3,
-                  ), // Adjust the skew value as needed
-                  child: Wrap(
-                    spacing: 20.w, // Horizontal space between items
-                    children: [
-                      // Your widgets here
-                      Container(width: 100, height: 100, color: Colors.red),
-                      Container(width: 100, height: 80, color: Colors.blue),
-                      // Add more widgets as needed
-                    ],
-                  ),
                 ),
               ],
             ).paddingAll(20),
           ),
         ),
-        Positioned(bottom: -10, child: BottomNavWidget()),
+        Positioned(left: 0, right: 0, bottom: -10, child: BottomNavWidget()),
+      ],
+    );
+  }
+}
+
+class Header extends StatelessWidget {
+  const Header({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        CustomText(
+          text: "Choose your Bike",
+          fontSize: 20,
+          color: kWhite,
+          fontWeight: FontWeight.w700,
+        ),
+        SkewedContainer(
+          width: 44,
+          height: 44,
+          child: CustomAsset(
+            assetPath: Assets.svgsSearch,
+            assetType: AssetType.svg,
+            width: 20,
+            height: 20,
+          ),
+        ),
       ],
     );
   }
