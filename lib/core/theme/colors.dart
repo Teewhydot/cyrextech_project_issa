@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 const Color kGunMetalColor = Color(0xff242C3B);
+const Color kDeepGunMetalColor = Color(0xff222834);
 const Color kPictionBlue = Color(0xff37B6E9);
 const Color kMajorelleBlue = Color(0xff4B4CED);
 const Color kCharcoal = Color(0xff353F54);

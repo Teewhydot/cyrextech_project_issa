@@ -15,7 +15,7 @@ class ProductDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(width: 1.sw, height: 1.sh, color: kCharcoal),
+        Container(width: 1.sw, height: 1.sh, color: kGunMetalColor),
         Positioned(
           bottom: 0,
           top: -230,

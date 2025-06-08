@@ -10,12 +10,14 @@ class SkewedContainer extends StatelessWidget {
       primaryGradientColor,
       secondaryGradientColor;
   final bool skew, hasShadow;
+  final double skewValue;
 
   const SkewedContainer({
     super.key,
     required this.width,
     required this.height,
     this.borderRadius = 10.0,
+    this.skewValue = 0.20,
     this.child = const SizedBox.shrink(),
     this.primaryBgGradientColor = kPictionBlue,
     this.secondaryBgGradientColor = kMajorelleBlue,
@@ -34,7 +36,7 @@ class SkewedContainer extends StatelessWidget {
         Transform.translate(
           offset: Offset(0, skew ? height.h * 0.12 : 0),
           child: Transform(
-            transform: skew ? Matrix4.skewY(-0.20) : Matrix4.identity(),
+            transform: skew ? Matrix4.skewY(-skewValue) : Matrix4.identity(),
             child: Container(
               padding: EdgeInsets.all(1.5),
               height: height.h,

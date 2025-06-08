@@ -11,6 +11,7 @@ class CustomAsset extends StatelessWidget {
   final AssetType assetType;
   final Color? svgAssetColor;
   final MainAxisAlignment imageAlignment = MainAxisAlignment.center;
+  final Alignment svgAlignment;
 
   const CustomAsset({
     super.key,
@@ -21,6 +22,7 @@ class CustomAsset extends StatelessWidget {
     this.svgAssetColor,
     this.fit = BoxFit.cover,
     this.assetType = AssetType.image,
+    this.svgAlignment = Alignment.center,
   });
   @override
   Widget build(BuildContext context) {
@@ -41,6 +43,7 @@ class CustomAsset extends StatelessWidget {
             width: width.w,
             height: height.h,
             color: svgAssetColor,
+            alignment: svgAlignment,
           ),
         ),
       },
