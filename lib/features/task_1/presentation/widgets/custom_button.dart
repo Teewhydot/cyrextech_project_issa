@@ -67,7 +67,7 @@ class _CustomButtonState extends State<CustomButton> {
         onPressed: widget.onTap,
         style: NeumorphicStyle(
           color: kCharcoal,
-          depth: isActive || _isPressed ? -3 : 3,
+          depth: isActive || _isPressed ? 3 : -3,
           intensity: 3,
           lightSource: LightSource.topLeft,
           shadowDarkColor: kGunMetalColor,

@@ -23,7 +23,7 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
           painter: RPSCustomPainter(),
           child: SizedBox(
             width: 1.sw,
-            height: 83.h,
+            height: 103.h,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [

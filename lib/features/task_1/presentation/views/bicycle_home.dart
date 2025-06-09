@@ -2,8 +2,10 @@ import 'dart:ui';
 
 import 'package:cyrextech_project_issa/components/image.dart';
 import 'package:cyrextech_project_issa/components/texts.dart';
+import 'package:cyrextech_project_issa/core/extensions.dart';
 import 'package:cyrextech_project_issa/core/theme/colors.dart';
 import 'package:cyrextech_project_issa/features/task_1/domain/models/product.dart';
+import 'package:cyrextech_project_issa/features/task_1/presentation/views/product_details.dart';
 import 'package:cyrextech_project_issa/features/task_1/presentation/widgets/bottom_nav_widget.dart';
 import 'package:cyrextech_project_issa/features/task_1/presentation/widgets/custom_container.dart';
 import 'package:cyrextech_project_issa/features/task_1/presentation/widgets/skewed_container_stack.dart';
@@ -59,7 +61,6 @@ class BicycleHome extends StatelessWidget {
           ),
         ),
         ClipRRect(
-          borderRadius: BorderRadius.circular(20.r), // Adjust as needed
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 30.0, sigmaY: 30.0),
             child: SizedBox(width: 1.sw, height: 300), // Adjust blur intensity
@@ -71,7 +72,9 @@ class BicycleHome extends StatelessWidget {
               children: [
                 Header(),
                 20.verticalSpace,
-                HomeCard(),
+                HomeCard().onTap(() {
+                  Get.to(() => const ProductDetails());
+                }),
                 SkewedContainerStack(),
                 SizedBox(
                   height: 1000.h,

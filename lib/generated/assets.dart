@@ -15,6 +15,7 @@ class Assets {
   static const String navSvgsPerson = 'assets/svgs/nav_svgs/person.svg';
   static const String navSvgsWalls = 'assets/svgs/nav_svgs/walls.svg';
   static const String svgsArrowBack = 'assets/svgs/arrow_back.svg';
+  static const String svgsArrowDown = 'assets/svgs/arrow_down.svg';
   static const String svgsArrowForward = 'assets/svgs/arrow_forward.svg';
   static const String svgsBgRectangle = 'assets/svgs/bg_rectangle.svg';
   static const String svgsBicycle = 'assets/svgs/bicycle.svg';
@@ -24,6 +25,8 @@ class Assets {
   static const String svgsHelmet = 'assets/svgs/helmet.svg';
   static const String svgsHills = 'assets/svgs/hills.svg';
   static const String svgsPlus = 'assets/svgs/plus.svg';
+  static const String svgsProductDetailsBg =
+      'assets/svgs/product_details_bg.svg';
   static const String svgsRoad = 'assets/svgs/road.svg';
   static const String svgsSearch = 'assets/svgs/search.svg';
 }

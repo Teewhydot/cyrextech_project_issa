@@ -11,6 +11,8 @@ class SkewedContainer extends StatelessWidget {
       secondaryGradientColor;
   final bool skew, hasShadow;
   final double skewValue;
+  final List<double> stops;
+  final Alignment begin, end;
 
   const SkewedContainer({
     super.key,
@@ -25,6 +27,9 @@ class SkewedContainer extends StatelessWidget {
     this.secondaryGradientColor = kMajorelleBlue,
     this.skew = false,
     this.hasShadow = false,
+    this.stops = const [0.2, 0.55],
+    this.begin = Alignment.topCenter,
+    this.end = Alignment.bottomRight,
   });
 
   @override
@@ -44,9 +49,9 @@ class SkewedContainer extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [primaryBgGradientColor, secondaryBgGradientColor],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomRight,
-                  stops: [0.2, 0.55],
+                  begin: begin,
+                  end: end,
+                  stops: stops,
                 ),
                 borderRadius: BorderRadius.circular(borderRadius.r),
                 boxShadow: [

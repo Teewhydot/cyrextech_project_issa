@@ -44,6 +44,10 @@ class Welcome extends StatelessWidget {
             SkewedContainer(
               width: 160,
               height: 44,
+              hasShadow: true,
+              begin: Alignment.topLeft,
+              end: Alignment.bottomCenter,
+              stops: [0.5, 0.89],
               child: CustomText(
                 text: "Task 1",
                 color: kWhite,
@@ -57,6 +61,7 @@ class Welcome extends StatelessWidget {
             SkewedContainer(
               width: 160,
               height: 44,
+              hasShadow: true,
               child: CustomText(
                 text: "Task 2",
                 color: kWhite,
