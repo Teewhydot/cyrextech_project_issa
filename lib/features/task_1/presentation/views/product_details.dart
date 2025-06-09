@@ -71,7 +71,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       }
                     }),
                     CustomText(
-                      text: "PEUGEOT 208",
+                      text: "PEUGEOT - LR01",
                       fontSize: 20.sp,
                       color: kWhite,
                       fontWeight: FontWeight.w600,
@@ -178,12 +178,12 @@ class _ProductDetailsState extends State<ProductDetails> {
                             ),
                             29.verticalSpace,
                             CustomText(
-                              text: "PEUGEOT 208",
+                              text: "PEUGEOT - LR01",
                               fontSize: 20.sp,
                               color: kWhite,
                               alignment: MainAxisAlignment.start,
                             ),
-                            if (_activeIndex == 0)
+                            if (_activeIndex == 1)
                               CustomWrapText(
                                 text:
                                     "The LR01 uses the same design as the most iconic bikes from PEUGEOT Cycles' 130-year history and combines it with agile, dynamic performance that's perfectly suited to navigating today's cities. As well as a lugged steel frame and iconic PEUGEOT black-and-white chequer design, this city bike also features a 16-speed Shimano Claris drivetrain.",
