@@ -7,7 +7,6 @@ import 'package:cyrextech_project_issa/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_sliding_box/flutter_sliding_box.dart';
 import 'package:get/get.dart';
 import 'package:gusto_neumorphic/gusto_neumorphic.dart';
 
@@ -21,8 +20,6 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
-  BoxController boxController = BoxController();
-
   bool expanded = false;
   int _activeIndex = 0; // 0 for Description, 1 for Specification
 
@@ -65,7 +62,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ),
                     ).onTap(() {
                       if (expanded) {
-                        boxController.closeBox();
                         setState(() {
                           expanded = false;
                           _activeIndex = 0;
@@ -163,7 +159,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                                   text: "Description",
                                   isActive: _activeIndex == 1,
                                   onTap: () {
-                                    boxController.openBox();
                                     setState(() {
                                       _activeIndex = 1;
                                       expanded = true;
@@ -255,7 +250,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                           text: "Description",
                           isActive: _activeIndex == 1,
                           onTap: () {
-                            boxController.openBox();
                             setState(() {
                               _activeIndex = 1;
                               expanded = true;
