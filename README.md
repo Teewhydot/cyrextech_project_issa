@@ -1,6 +1,6 @@
 # CyrexTech Project Issa
 
-A modern Flutter application featuring a stylish bicycle shop UI, product cards, and custom widgets.
+A modern Flutter application featuring a stylish bicycle shop UI, custom product cards, and advanced UI effects.
 
 ## Features
 
@@ -11,16 +11,19 @@ A modern Flutter application featuring a stylish bicycle shop UI, product cards,
 - Bottom navigation bar
 - Blurred background effects
 
-## Getting Started
+
+### Prerequisites
+
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- [Dart SDK](https://dart.dev/get-dart)
+- Android Studio or VS Code
+
+### Installation
 
 1. **Clone the repository:**
-## Project Structure
-
-- `lib/features/task_1/domain/models/` – Data models (e.g., Product)
-- `lib/features/task_1/presentation/views/` – Main screens (e.g., BicycleHome)
-- `lib/features/task_1/presentation/widgets/` – Custom widgets (e.g., SkewedContainer)
-- `lib/components/` – Shared components (e.g., CustomAsset, CustomText)
-- `lib/core/theme/` – App color and theme definitions
+   ```sh
+   git clone https://github.com/Teewhydot/cyrextech_project_issa.git
+   cd cyrextech_project_issa
 
 ## Dependencies
 
@@ -29,10 +32,3 @@ A modern Flutter application featuring a stylish bicycle shop UI, product cards,
 - [flutter_svg](https://pub.dev/packages/flutter_svg)
 - [smooth_page_indicator](https://pub.dev/packages/smooth_page_indicator)
 - [blur](https://pub.dev/packages/blur)
-
-## Screenshots
-
-<!-- Add screenshots of your app here -->
-<!-- Example:
-![App Screenshot](path/to/screenshot.png) 
--->
