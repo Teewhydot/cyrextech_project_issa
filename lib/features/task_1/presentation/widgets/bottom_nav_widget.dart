@@ -53,7 +53,7 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                                       assetPath: Assets.svgsBicycle,
                                       assetType: AssetType.svg,
                                       width: 28,
-                                      height: 28,
+                                      height: 17,
                                     ),
                                   )
                                   : SizedBox(
@@ -100,7 +100,7 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                                       assetPath: Assets.navSvgsWalls,
                                       assetType: AssetType.svg,
                                       width: 28,
-                                      height: 28,
+                                      height: 17,
                                     ),
                                   )
                                   : SizedBox(
@@ -147,7 +147,7 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                                       assetPath: Assets.navSvgsCart,
                                       assetType: AssetType.svg,
                                       width: 28,
-                                      height: 28,
+                                      height: 17,
                                     ),
                                   )
                                   : SizedBox(
@@ -195,7 +195,7 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                                       assetPath: Assets.navSvgsPerson,
                                       assetType: AssetType.svg,
                                       width: 28,
-                                      height: 28,
+                                      height: 17,
                                     ),
                                   )
                                   : SizedBox(
@@ -242,7 +242,7 @@ class _BottomNavWidgetState extends State<BottomNavWidget> {
                                       assetPath: Assets.navSvgsDoc,
                                       assetType: AssetType.svg,
                                       width: 28,
-                                      height: 28,
+                                      height: 17,
                                     ),
                                   )
                                   : SizedBox(
