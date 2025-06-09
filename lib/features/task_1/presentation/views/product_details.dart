@@ -249,6 +249,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                         CustomButton(
                           text: "Description",
                           isActive: _activeIndex == 1,
+                          textFontWeight: FontWeight.normal,
                           onTap: () {
                             setState(() {
                               _activeIndex = 1;
@@ -259,6 +260,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                         CustomButton(
                           text: "Specification",
                           isActive: _activeIndex == 2,
+                          textFontWeight: FontWeight.normal,
+
                           onTap: () {
                             setState(() {
                               _activeIndex = 2;

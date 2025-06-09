@@ -8,12 +8,14 @@ class CustomButton extends StatefulWidget {
   final String text;
   final bool isActive;
   final VoidCallback? onTap;
+  final FontWeight textFontWeight;
 
   const CustomButton({
     super.key,
     required this.text,
     this.isActive = false,
     this.onTap,
+    this.textFontWeight = FontWeight.bold,
   });
 
   @override
@@ -80,7 +82,7 @@ class _CustomButtonState extends State<CustomButton> {
         child: CustomText(
           text: widget.text,
           fontSize: 15,
-          fontWeight: FontWeight.bold,
+          fontWeight: widget.textFontWeight,
           color: isActive ? kPictionBlue : kWhite,
         ),
       ),
