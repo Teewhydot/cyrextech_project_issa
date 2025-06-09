@@ -69,7 +69,6 @@ class SkewedContainer extends StatelessWidget {
                 height: height.h,
                 width: width.h,
                 decoration: BoxDecoration(
-                  color: kWhite,
                   gradient: LinearGradient(
                     colors: [primaryGradientColor, secondaryGradientColor],
                     begin: Alignment.topLeft,

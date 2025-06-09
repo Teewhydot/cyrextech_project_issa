@@ -4,6 +4,7 @@ import 'package:cyrextech_project_issa/core/extensions.dart';
 import 'package:cyrextech_project_issa/core/theme/colors.dart';
 import 'package:cyrextech_project_issa/features/task_1/presentation/widgets/custom_container.dart';
 import 'package:cyrextech_project_issa/generated/assets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_sliding_box/flutter_sliding_box.dart';
@@ -41,7 +42,6 @@ class _ProductDetailsState extends State<ProductDetails> {
               height: 865,
             ),
           ).animate().fade(duration: 1000.ms),
-          //body
           SafeArea(
             child: Scaffold(
               backgroundColor: Colors.transparent,
@@ -135,113 +135,6 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ),
           ),
-          // SlidingBox(
-          //   controller: boxController,
-          //   width: 1.sw,
-          //   minHeight: 1.sh * 0.1,
-          //   maxHeight: 450,
-          //   style: BoxStyle.none,
-          //   color: kCharcoal,
-          //   collapsed: true,
-          //   draggable: false,
-          //   draggableIcon: null,
-          //   draggableIconBackColor: kCharcoal,
-          //   body: Column(
-          //     children: [
-          //       Column(
-          //         children: [
-          //           32.verticalSpace,
-          //           Row(
-          //             spacing: 30,
-          //             mainAxisAlignment: MainAxisAlignment.center,
-          //             children: [
-          //               CustomButton(
-          //                 text: "Description",
-          //                 isActive: _activeIndex == 1,
-          //                 onTap: () {
-          //                   boxController.openBox();
-          //                   setState(() {
-          //                     _activeIndex = 1;
-          //                     expanded = true;
-          //                   });
-          //                 },
-          //               ),
-          //               CustomButton(
-          //                 text: "Specification",
-          //                 isActive: _activeIndex == 2,
-          //                 onTap: () {
-          //                   setState(() {
-          //                     _activeIndex = 2;
-          //                   });
-          //                 },
-          //               ),
-          //             ],
-          //           ),
-          //           29.verticalSpace,
-          //           CustomText(
-          //             text: "PEUGEOT 208",
-          //             fontSize: 20.sp,
-          //             color: kWhite,
-          //             alignment: MainAxisAlignment.start,
-          //           ),
-          //           if (_activeIndex == 0)
-          //             CustomWrapText(
-          //               text:
-          //                   "The LR01 uses the same design as the most iconic bikes from PEUGEOT Cycles' 130-year history and combines it with agile, dynamic performance that's perfectly suited to navigating today's cities. As well as a lugged steel frame and iconic PEUGEOT black-and-white chequer design, this city bike also features a 16-speed Shimano Claris drivetrain.",
-          //               fontSize: 15.sp,
-          //               fontWeight: FontWeight.normal,
-          //               color: kWhite.withOpacity(0.8),
-          //               textAlign: TextAlign.start,
-          //             )
-          //           else
-          //             CustomWrapText(
-          //               text:
-          //                   "Motor: 250W Brushless Motor\nBattery: 36V 10Ah Lithium-Ion\nRange: Up to 50 miles\nFrame: Lightweight Aluminum\nBrakes: Front and Rear Disc Brakes\nWeight: Approximately 50 lbs",
-          //               fontSize: 14.sp,
-          //               color: kWhite.withOpacity(0.8),
-          //               textAlign: TextAlign.start,
-          //             ),
-          //         ],
-          //       ).paddingSymmetric(horizontal: 20.w),
-          //       Container(
-          //         width: 1.sw,
-          //         height: 104.h,
-          //         decoration: BoxDecoration(
-          //           color: kCharcoal,
-          //           borderRadius: BorderRadius.vertical(
-          //             top: Radius.circular(50.r),
-          //           ),
-          //           border: Border.all(
-          //             color: kWhite.withOpacity(0.1),
-          //             width: 1.w,
-          //           ),
-          //         ),
-          //         child: Row(
-          //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //           children: [
-          //             CustomText(
-          //               text: "\$1,999",
-          //               fontSize: 24.sp,
-          //               color: kPictionBlue,
-          //               fontWeight: FontWeight.normal,
-          //             ),
-          //             SkewedContainer(
-          //               width: 160,
-          //               height: 44,
-          //               child: CustomText(
-          //                 text: "Add to Cart",
-          //                 color: kWhite,
-          //                 fontSize: 15.sp,
-          //                 fontWeight: FontWeight.w400,
-          //                 alignment: MainAxisAlignment.center,
-          //               ),
-          //             ),
-          //           ],
-          //         ).paddingAll(35.r),
-          //       ),
-          //     ],
-          //   ),
-          // ),
           Positioned(
             bottom: 0,
             child: AnimatedContainer(
@@ -253,102 +146,135 @@ class _ProductDetailsState extends State<ProductDetails> {
                 borderRadius: BorderRadius.vertical(top: Radius.circular(30.r)),
                 border: Border.all(color: kWhite.withOpacity(0.1), width: 1.w),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      32.verticalSpace,
-                      Row(
-                        spacing: 30,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CustomButton(
-                            text: "Description",
-                            isActive: _activeIndex == 1,
-                            onTap: () {
-                              boxController.openBox();
-                              setState(() {
-                                _activeIndex = 1;
-                                expanded = true;
-                              });
-                            },
-                          ),
-                          CustomButton(
-                            text: "Specification",
-                            isActive: _activeIndex == 2,
-                            onTap: () {
-                              setState(() {
-                                _activeIndex = 2;
-                              });
-                            },
-                          ),
-                        ],
-                      ),
-                      29.verticalSpace,
-                      CustomText(
-                        text: "PEUGEOT 208",
-                        fontSize: 20.sp,
-                        color: kWhite,
-                        alignment: MainAxisAlignment.start,
-                      ),
-                      if (_activeIndex == 0)
-                        CustomWrapText(
-                          text:
-                              "The LR01 uses the same design as the most iconic bikes from PEUGEOT Cycles' 130-year history and combines it with agile, dynamic performance that's perfectly suited to navigating today's cities. As well as a lugged steel frame and iconic PEUGEOT black-and-white chequer design, this city bike also features a 16-speed Shimano Claris drivetrain.",
-                          fontSize: 15.sp,
-                          fontWeight: FontWeight.normal,
-                          color: kWhite.withOpacity(0.8),
-                          textAlign: TextAlign.start,
-                        )
-                      else
-                        CustomWrapText(
-                          text:
-                              "Motor: 250W Brushless Motor\nBattery: 36V 10Ah Lithium-Ion\nRange: Up to 50 miles\nFrame: Lightweight Aluminum\nBrakes: Front and Rear Disc Brakes\nWeight: Approximately 50 lbs",
-                          fontSize: 14.sp,
-                          color: kWhite.withOpacity(0.8),
-                          textAlign: TextAlign.start,
-                        ),
-                    ],
-                  ).paddingSymmetric(horizontal: 20.w),
-                  Container(
-                    width: 1.sw,
-                    height: 104.h,
-                    decoration: BoxDecoration(
-                      color: kCharcoal,
-                      borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(50.r),
-                        bottom: Radius.circular(50.r),
-                      ),
-                      border: Border.all(
-                        color: kWhite.withOpacity(0.1),
-                        width: 1.w,
-                      ),
-                    ),
-                    child: Row(
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  if (expanded) {
+                    return Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CustomText(
-                          text: "\$1,999",
-                          fontSize: 24.sp,
-                          color: kPictionBlue,
-                          fontWeight: FontWeight.normal,
-                        ),
-                        SkewedContainer(
-                          width: 160,
-                          height: 44,
-                          child: CustomText(
-                            text: "Add to Cart",
-                            color: kWhite,
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.w400,
-                            alignment: MainAxisAlignment.center,
+                        Column(
+                          children: [
+                            32.verticalSpace,
+                            Row(
+                              spacing: 30,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                CustomButton(
+                                  text: "Description",
+                                  isActive: _activeIndex == 1,
+                                  onTap: () {
+                                    boxController.openBox();
+                                    setState(() {
+                                      _activeIndex = 1;
+                                      expanded = true;
+                                    });
+                                  },
+                                ),
+                                CustomButton(
+                                  text: "Specification",
+                                  isActive: _activeIndex == 2,
+                                  onTap: () {
+                                    setState(() {
+                                      _activeIndex = 2;
+                                    });
+                                  },
+                                ),
+                              ],
+                            ),
+                            29.verticalSpace,
+                            CustomText(
+                              text: "PEUGEOT 208",
+                              fontSize: 20.sp,
+                              color: kWhite,
+                              alignment: MainAxisAlignment.start,
+                            ),
+                            if (_activeIndex == 0)
+                              CustomWrapText(
+                                text:
+                                    "The LR01 uses the same design as the most iconic bikes from PEUGEOT Cycles' 130-year history and combines it with agile, dynamic performance that's perfectly suited to navigating today's cities. As well as a lugged steel frame and iconic PEUGEOT black-and-white chequer design, this city bike also features a 16-speed Shimano Claris drivetrain.",
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.normal,
+                                color: kWhite.withOpacity(0.8),
+                                textAlign: TextAlign.start,
+                              )
+                            else
+                              CustomWrapText(
+                                text:
+                                    "Motor: 250W Brushless Motor\nBattery: 36V 10Ah Lithium-Ion\nRange: Up to 50 miles\nFrame: Lightweight Aluminum\nBrakes: Front and Rear Disc Brakes\nWeight: Approximately 50 lbs",
+                                fontSize: 14.sp,
+                                color: kWhite.withOpacity(0.8),
+                                textAlign: TextAlign.start,
+                              ),
+                          ],
+                        ).paddingSymmetric(horizontal: 20.w),
+                        Container(
+                          width: 1.sw,
+                          height: 104.h,
+                          decoration: BoxDecoration(
+                            color: kCharcoal,
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(50.r),
+                              bottom: Radius.circular(50.r),
+                            ),
+                            border: Border.all(
+                              color: kWhite.withOpacity(0.1),
+                              width: 1.w,
+                            ),
                           ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              CustomText(
+                                text: "\$1,999",
+                                fontSize: 24.sp,
+                                color: kPictionBlue,
+                                fontWeight: FontWeight.normal,
+                              ),
+                              SkewedContainer(
+                                width: 160,
+                                height: 44,
+                                child: CustomText(
+                                  text: "Add to Cart",
+                                  color: kWhite,
+                                  fontSize: 15.sp,
+                                  fontWeight: FontWeight.w400,
+                                  alignment: MainAxisAlignment.center,
+                                ),
+                              ),
+                            ],
+                          ).paddingAll(35.r),
                         ),
                       ],
-                    ).paddingAll(35.r),
-                  ),
-                ],
+                    );
+                  } else {
+                    return Row(
+                      spacing: 30,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CustomButton(
+                          text: "Description",
+                          isActive: _activeIndex == 1,
+                          onTap: () {
+                            boxController.openBox();
+                            setState(() {
+                              _activeIndex = 1;
+                              expanded = true;
+                            });
+                          },
+                        ),
+                        CustomButton(
+                          text: "Specification",
+                          isActive: _activeIndex == 2,
+                          onTap: () {
+                            setState(() {
+                              _activeIndex = 2;
+                            });
+                          },
+                        ),
+                      ],
+                    );
+                  }
+                },
               ),
             ),
           ),
